@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/log.png">
+    <title>BetterChoice Trading</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Anek' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #cs-container1 {
+            position: relative;
+            width: 410px;
+            height: 730px;
+            overflow: hidden;
+        }
+
+        #image {
+            position: absolute;
+            width: 120%;
+            height: 100%;
+            transition: transform 0.9s ease; /* Adjust duration for a slower zoom */
+        }
+
+        #image1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.9s ease; /* Adjust duration for a slower zoom */
+        }
+
+        #image:hover {
+            transform: scale(1.1); /* Adjust scale for zoom level */
+        }
+
+        #image1:hover {
+            transform: scale(1.1); /* Adjust scale for zoom level */
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .green-block {
+            width: 345px;
+            height: 730px;
+            background-color: #30a244;
+            color: white;
+            position: relative;
+            margin-right: 0px; /* Adjust the margin as needed */
+        }
+
+        .green-block hr {
+            position: absolute;
+        }
+
+        .green-block h1, .green-block h2 {
+            font-family: 'Poppins', sans-serif;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .green-block .welcome-text {
+            font-size: 15px;
+            font-weight: 200;
+            left: 97px;
+            top: 140px;
+        }
+
+        .green-block .main-title {
+            font-size: 75px;
+            font-weight: 800;
+            left: 97px;
+            top: 105px;
+        }
+
+        .green-block .contact-text {
+            font-size: 30px;
+            font-weight: 280;
+            left: 97px;
+            top: 595px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+    <header id="cs-navigation">
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="stylesheet" type="text/css" href="clients.css">
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" href="globalstyle.css">
+        <div class="cs-container">
+            <!-- Nav Logo -->
+            <a href="" class="cs-logo" aria-label="back to home">
+                <img src="images/mainlogoeng.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!-- Navigation List -->
+            <nav class="cs-nav" role="navigation">
+                <!-- Mobile Nav Toggle -->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="cs-ul-wrapper" style="font-family: 'Anek', sans-serif;">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link cs-active">
+                                Home
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="#steps-1675" class="cs-li-link">
+                                Services
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="aboutus.html" class="cs-li-link">
+                                About Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="#cs-footer-1292" class="cs-button-solid cs-nav-button">Contact Us</a>
+            <!-- Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+            <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+                <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+                <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+            </button> -->
+        </div>
+        <script src="home.js"></script>
+    </header>
+
+    <div class="flex-container">
+        <div class="green-block">
+            <hr style="margin-top: 165px;margin-left: 97px; width: 46%; border: 4px solid #f79437;">
+            <h1 class="welcome-text">Welcome/Marhaba!</h1>
+            <h2 class="main-title">Enhancing Distribution Across Dubai</h2>
+            <a href="#cs-footer-1292" style="text-decoration: none; color: inherit;">
+            <h1 class="contact-text">Get In Touch</h1>
+            </a>
+            <hr style="margin-top: 610px;margin-left: 165px; width: 61%; border: 29px solid #f79437;z-index: 2;">
+            <hr style="margin-top: 636px;margin-left: 300px; width: 16%; border: 1.5px solid white;z-index: 3;">
+        </div>
+
+        <div id="cs-container1">
+            <img id="image" src="images/van.jpg" alt="Image">
+        </div>
+        <div id="cs-container1">
+            <img id="image1" src="images/boxes.jpg" alt="Image">
+        </div>
+        <div id="cs-container1">
+            <img id="image1" src="images/board.jpg" alt="Image">
+        </div>
+    </div>
+           
+
+    <!-- ============================================ -->
+<!--                   Services              -->
+<!-- ============================================ -->
+
+<section id="steps-1675">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">What We Do</span>
+            <h2 class="cs-title">Our Services</h2>
+        </div>
+            <ul>
+                <li class="cs-item">
+                    <span class="cs-number"><img src="images/vanclip.png" width="180" height="190"></span>
+                    <h3 class="cs-h3">
+                    FMCG Distribution
+                    </h3>
+                    <p class="cs-item-text">
+                        We focus on importing high-quality Fast-Moving Consumer Goods (FMCG) and delivering them to groceries and supermarkets across the region. At our company, we are dedicated to ensuring that the products we import meet the highest standards of quality, sourced from reputable manufacturers around the world. Our commitment to excellence extends beyond our products to the service we provide; we pride ourselves on our efficient logistics, reliable delivery schedules, and exceptional customer support. We employ stringent quality control measures to ensure that every product is handled with care and delivered in optimal condition. We strive to build long-lasting relationships with our clients, providing them with the reliability and support they need to thrive in a competitive market.
+                     </p>
+                </li>
+                <hr class="faded-hr">
+                <li class="ct-item">
+                    <span class="cs-number"><img src="images/plate.png" width="180" height="190"></span>
+                    <h3 class="cs-h3">
+                    HoReCa Supply
+                    </h3>
+                    <p class="cs-item-text">
+                    At our company, we understand that the quality of our goods and services directly impacts the standard your HoReCa establishment aims to deliver. That’s why we are committed to sourcing and delivering the freshest and highest-quality products for our hospitality clients. By partnering with trusted suppliers and employing rigorous quality control measures, we ensure that every item we provide meets the highest standards of quality at the best rates in the market. With us handling the complexities of supply chain management, you can focus on what truly matters—delighting your guests and running your business. Trust us to be your reliable partner in achieving unparalleled service and quality, allowing you to concentrate on providing exceptional experiences in your hotel, restaurant, or café.                     </p>
+                </li>
+
+                
+            </ul>
+        
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Clients                     -->
+<!-- ============================================ -->
+<section id="collection-1577">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Your Reliable Partner</span>
+            <h2 class="cs-title">Few of Our Valued Clients</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/emiratesgrand.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/emiratesgrand.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/emiratesgrand.jpeg"
+                                width="365" height="201" alt="t-shirt">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/signature.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/signature.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/signature.jpeg" width="365"
+                                height="201" alt="purse">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/firstcentral.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/firstcentral.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/firstcentral.jpeg"
+                                width="365" height="201" alt="shoes">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/donatello.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/donatello.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/donatello.jpeg"
+                                width="365" height="201" alt="perfume">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/vintagegrand.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/vintagegrand.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/vintagegrand.jpeg"
+                                width="365" height="201" alt="perfume">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/goldenloaf.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/goldenloaf.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/goldenloaf.jpeg"
+                                width="365" height="201" alt="perfume">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/social.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/social.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/social.jpeg"
+                                width="365" height="201" alt="perfume">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/ops.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/ops.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/ops.jpeg"
+                                width="365" height="201" alt="perfume">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/loui.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/loui.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/loui.jpeg"
+                                width="365" height="201" alt="perfume">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/hungrymonk.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/hungrymonk.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/hungrymonk.jpegg"
+                                width="365" height="201" alt="perfume">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/zulf.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/zulf.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/zulf.jpegg"
+                                width="365" height="201" alt="perfume">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="images/tete.jpeg">
+                        <source media="(min-width: 601px)"
+                                srcset="images/tete.jpeg">
+                        <img loading="lazy" decoding="async"
+                                src="images/tete.jpegg"
+                                width="365" height="201" alt="perfume">
+                    </picture>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-1292">
+    <div class="cs-container">      
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <a aria-label="go back to home" class="cs-logo" href="">
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="images/logowhite.png" alt="logo" width="240" height="32">
+            </a>
+            <p class="cs-text">
+                For all enquiries,contact us at :
+            </p>
+            <p class ="cs-text">
+                <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://img.icons8.com/?size=100&id=22028&format=png&color=FFFFFF" alt="icon" width="24" height="24">
+                betterchoicetrading@gmail.com
+            </p>
+            <p class ="cs-text">
+                <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://img.icons8.com/?size=100&id=14181&format=png&color=FFFFFF" alt="icon" width="24" height="24">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                +971 545432461 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                +971 44497727
+            </p>
+            
+        </div>
+        <!-- Links -->
+        <ul class="cs-nav">
+         
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d543.6505619004747!2d55.55909379900265!3d25.233788604002882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef58b2ee0c6837f%3A0xb968215a67031307!2sBetter%20Choice%20Foodstuff!5e0!3m2!1sen!2sae!4v1722000205262!5m2!1sen!2sae" width="600" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </ul>
+    </div>
+    <div class="cs-bottom">
+        <span class="cs-copyright">Copyright ©2024 All rights reserved.BetterChoice Foodstuff Trading LLC |
+            <a class="cs-copyright-link" href="https://www.linkedin.com/in/zaheenthareeq/">Designed and Developed by ZT</a>
+        </span>
+    </div>
+    <!--Floating Cirlces-->
+    <div class="cs-floater" aria-hidden="true"></div>
+</footer>
+                                
+</body>   
+</html>

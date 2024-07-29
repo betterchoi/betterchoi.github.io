@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/log.png">
+    <title>BetterChoice Trading</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Anek' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    
+    <style>
+        html,body {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #cs-container1 {
+            position: relative;
+            width: 410px;
+            height: 730px;
+            overflow: hidden;
+        }
+
+        #image {
+            position: absolute;
+            width: 120%;
+            height: 100%;
+            transition: transform 0.9s ease; /* Adjust duration for a slower zoom */
+        }
+
+        #image1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.9s ease; /* Adjust duration for a slower zoom */
+        }
+
+        #image:hover {
+            transform: scale(1.1); /* Adjust scale for zoom level */
+        }
+
+        #image1:hover {
+            transform: scale(1.1); /* Adjust scale for zoom level */
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .green-block {
+            width: 345px;
+            height: 730px;
+            background-color: #30a244;
+            color: white;
+            position: relative;
+            margin-right: 0px; /* Adjust the margin as needed */
+        }
+
+        .green-block hr {
+            position: absolute;
+        }
+
+        .green-block h1, .green-block h2 {
+            font-family: 'Poppins', sans-serif;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .green-block .welcome-text {
+            font-size: 15px;
+            font-weight: 200;
+            left: 97px;
+            top: 140px;
+        }
+
+        .green-block .main-title {
+            font-size: 75px;
+            font-weight: 800;
+            left: 97px;
+            top: 105px;
+        }
+
+        .green-block .contact-text {
+            font-size: 30px;
+            font-weight: 280;
+            left: 97px;
+            top: 595px;
+        }
+    </style>
+    <script src="home.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+</head>
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+    <header id="cs-navigation">
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="stylesheet" type="text/css" href="aboutus.css">
+        <link rel="stylesheet" type="text/css" href="clients.css">
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="globalstyle.css">
+        <div class="cs-container">
+            <!-- Nav Logo -->
+            <a href="home.html" class="cs-logo" aria-label="back to home">
+                <img src="images/mainlogoeng.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!-- Navigation List -->
+            <nav class="cs-nav" role="navigation">
+                <!-- Mobile Nav Toggle -->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="cs-ul-wrapper" style="font-family: 'Anek', sans-serif;">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="home.html" class="cs-li-link">
+                                Home
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="home.html" class="cs-li-link">
+                                Services
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="" class="cs-li-link cs-active">
+                                About Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="#cs-footer-1292" class="cs-button-solid cs-nav-button">Contact Us</a>
+            <!-- Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+            <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+                <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+                <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+            </button> -->
+        </div>
+        </header>
+
+    <!--Note: we used a flexbox on the image container instead of grid because this makes it more repsonsive to changes in the contact box. We set it up so if you add another .cs-link inside the contact-group div, the box grows in height to accommadate the new link and the image above it adjusts its height to be smaller proportional to how much taller the contact-group div grew from the new link. We needed it to be "flexible" so we used flexbox. -->
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+<body>
+<section id="sbs-953">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Left Image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="images/office.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="images/office.jpeg">
+                <img loading="lazy" decoding="async" src="images/office.jpeg" alt="hair salon" width="349" height="590">
+            </picture>
+            <div class="cs-flex">
+                <!--right image-->
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="images/truck.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="images/truck.jpg">
+                    <img loading="lazy" decoding="async" src="images/truck.jpg" alt="hair salon" width="281" height="387">
+                </picture>
+                <div class="cs-contact-group">
+                    <a class="cs-link" href="mailto:Info@health&wellness.com">
+                        <picture class="cs-wrapper">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://img.icons8.com/?size=100&id=22028&format=png&color=FFFFFF" alt="icon" width="24" height="24">
+                        </picture>
+                        <div class="cs-info">
+                            <span class="cs-header">Send A Message</span>
+                            <span class="cs-link-content">betterchoicetrading@gmail.com</span>
+                        </div>
+                    </a>
+                    <a class="cs-link" href="">
+                        <picture class="cs-wrapper">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://img.icons8.com/?size=100&id=15989&format=png&color=FFFFFF" alt="icon" width="24" height="24">
+                        </picture>
+                        <div class="cs-info">
+                            <span class="cs-header">Visit Us At</span>
+                            <span class="cs-link-content">Al Khawaneej - Dubai</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Driven by Client Fulfillment</span>
+            <h2 class="cs-title">Our Story & Team</h2>
+            <p class="cs-text">
+                Founded in 2021, BetterChoice focuses on the principles that guide its operations, reliability and perseverance. Established by seasoned veterans with extensive industry exposure, BetterChoice brings a wealth of experience and insight to the table. The company is driven by a team that values integrity, professionalism, and a genuine commitment to client satisfaction. The BetterChoice team is dedicated to fostering strong, reliable relationships with clients, emphasizing transparency and trust in every interaction. Our approach blends years of expertise with a passion for delivering exceptional service, ensuring that each client's needs are met with precision and care. This commitment to excellence and healthy business practices shapes every aspect of BetterChoice's operations, setting a high standard in the industry and reinforcing its reputation as a dependable partner.
+            </p>
+        </div>
+    </div>
+</section>
+
+    <div class="container" id="container">
+        <div class="content">
+        <div class="row">
+            <h1 style="padding-left: 95px; font-weight: 700;">So Far</h1>
+        </div>
+        <div class="row">
+            <h1><span class="counter">50</span>+</h1>
+            <p>Brands distributed</p>
+        </div>
+        <div class="row">
+            <h1><span class="counter">3000</span>+</h1>
+            <p>sqft of warehouse space</p>
+        </div>
+        <div class="row">
+            <h1><span class="counter">50</span>+</h1>
+            <p>Clients being served</p>
+        </div>
+
+    </div>
+    </div>
+
+<!-- ============================================ -->
+<!--                   Vision                     -->
+<!-- ============================================ -->
+
+<section id="steps-1675">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Shaping Tomorrow</span>
+            <h2 class="cs-title">Beyond Distribution</h2>
+        </div>
+            <ul>
+                <li class="cs-item">
+                    <span class="cs-number"><img src="https://img.icons8.com/?size=100&id=22605&format=png&color=ffba43" width="160" height="160"></span>
+                    <h3 class="cs-h3">
+                    Vision
+                    </h3>
+                    <p class="cs-item-text">
+                        BetterChoice envisions to revolutionize the FMCG distribution landscape by delivering exceptional quality and innovative solutions, ensuring our products reach every corner of the market, and empowering consumers with the best choices available.
+                    </p>
+                </li>
+                <hr class="faded-hr">
+                <li class="ct-item">
+                    <span class="cs-number"><img src="https://img.icons8.com/?size=100&id=ITGbCUAC9jmB&format=png&color=ffba43" width="165" height="160"></span>
+                    <h3 class="cs-h3">
+                    Values
+                    </h3>
+                    <p class="cs-item-text">
+                    We operate with unwavering integrity, ensuring honesty and transparency in all our dealings. Our commitment to quality drives us to maintain the highest standards in our products. We embrace innovation, continually seeking creative solutions to improve our services. Our customers' needs and satisfaction are at the forefront of everything we do, and we are dedicated to sustainable practices that protect our environment for future generations.
+                    </li>
+
+                
+            </ul>
+        
+    </div>
+</section>
+<script src="jquery.counterup.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script>
+    jQuery(document).ready(function( $ )
+     {
+        $('.counter').counterUp({
+        delay: 10,
+        time: 2000
+        });
+
+
+
+    });
+       
+        
+</script>
+<section id="collection-7">
+</section>
+</body>
+
+
+<footer id="cs-footer-1292">
+    <div class="cs-container">      
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <a aria-label="go back to home" class="cs-logo" href="">
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="images/logowhite.png" alt="logo" width="240" height="32">
+            </a>
+            <p class="cs-text">
+                For all enquiries,contact us at :
+            </p>
+            <p class ="cs-text">
+                <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://img.icons8.com/?size=100&id=22028&format=png&color=FFFFFF" alt="icon" width="24" height="24">
+                betterchoicetrading@gmail.com
+            </p>
+            <p class ="cs-text">
+                <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://img.icons8.com/?size=100&id=14181&format=png&color=FFFFFF" alt="icon" width="24" height="24">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                +971 545432461 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                +971 44497727
+            </p>
+            
+        </div>
+        <!-- Links -->
+        <ul class="cs-nav">
+         
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d543.6505619004747!2d55.55909379900265!3d25.233788604002882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef58b2ee0c6837f%3A0xb968215a67031307!2sBetter%20Choice%20Foodstuff!5e0!3m2!1sen!2sae!4v1722000205262!5m2!1sen!2sae" width="600" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </ul>
+    </div>
+    <div class="cs-bottom">
+        <span class="cs-copyright">Copyright ©2024 All rights reserved.BetterChoice Foodstuff Trading LLC |
+            <a class="cs-copyright-link" href="https://www.linkedin.com/in/zaheenthareeq/">Designed and Developed by ZT</a>
+        </span>
+    </div>
+    <!--Floating Cirlces-->
+    <div class="cs-floater" aria-hidden="true"></div>
+</footer>
+
+
+
+
+
+
+</html>
